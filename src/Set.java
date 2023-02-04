@@ -32,9 +32,9 @@ class Set<T> implements Iterable<T> {
     }
 
     public Set<T> Union(Set<T> otherSet){
-        var newSet = new Set<T>();
+        Set<T> newSet = new Set<>();
 
-        for(var el: list){
+        for(T el: list){
             newSet.AddItem(el);
         }
 
@@ -46,15 +46,15 @@ class Set<T> implements Iterable<T> {
     }
 
     public Set<T> Intersection(Set<T> otherSet){
-        var newSet = new Set<T>();
+        Set<T> newSet = new Set<>();
 
-        for(var el: otherSet){
+        for(T el: otherSet){
             if(list.Contains(el)){
                 newSet.AddItem(el);
             }
         }
 
-        for(var el: list){
+        for(T el: list){
             if(otherSet.Contains(el)){
                 newSet.AddItem(el);
             }
@@ -64,9 +64,9 @@ class Set<T> implements Iterable<T> {
     }
 
     public Set<T> Difference(Set<T> otherSet){
-        var newSet = new Set<T>();
+        Set<T> newSet = new Set<>();
 
-        for(var el: list){
+        for(T el: list){
             if(!otherSet.Contains(el)){
                 newSet.AddItem(el);
             }
